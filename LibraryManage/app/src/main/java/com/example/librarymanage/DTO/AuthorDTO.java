@@ -1,4 +1,4 @@
-package com.example.librarymanage.model;
+package com.example.librarymanage.DTO;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
@@ -8,18 +8,18 @@ import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "author", foreignKeys = @ForeignKey(
-        entity= Book.class, parentColumns = "authorId",
+        entity= BookDTO.class, parentColumns = "authorId",
         childColumns = "authorId"),
         indices = @Index(value="authorId")
 )
-public class Author {
+public class AuthorDTO {
     @PrimaryKey(autoGenerate = true)
     private int authorId;
 
     @ColumnInfo(name = "authorName")
     private String authorName;
 
-    public Author(@NonNull int authorId, String authorName) {
+    public AuthorDTO(@NonNull int authorId, String authorName) {
         this.authorId = authorId;
         this.authorName = authorName;
     }

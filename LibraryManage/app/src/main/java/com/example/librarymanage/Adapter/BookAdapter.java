@@ -1,4 +1,4 @@
-package com.example.librarymanage;
+package com.example.librarymanage.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -9,16 +9,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.librarymanage.model.Book;
-import com.example.librarymanage.model.BookDetail;
+import com.example.librarymanage.DTO.BookDTO;
+import com.example.librarymanage.R;
 import com.makeramen.roundedimageview.RoundedImageView;
 
 import java.util.List;
 
 public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder>{
-    private List<BookDetail> book;
+    private List<BookDTO> book;
     Context context;
-    public BookAdapter(Context context, List<BookDetail> book) {
+    public BookAdapter(Context context, List<BookDTO> book) {
         this.context = context;
         this.book = book;
     }
@@ -38,7 +38,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
     @Override
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
         holder.bookName.setText(book.get(position).getBookName());
-        holder.author.setText(book.get(position).getAuthorName());
+//        holder.author.setText(book.get(position).getAuthorName());
         holder.bookImageView.setImageResource(R.drawable.ic_launcher_background);
     }
 
@@ -54,7 +54,7 @@ public class BookAdapter extends RecyclerView.Adapter<BookAdapter.BookViewHolder
             super(itemView);
             bookName = itemView.findViewById(R.id.book_name);
             author = itemView.findViewById(R.id.author_name);
-            bookImageView = itemView.findViewById(R.id.bookImage);
+            bookImageView = itemView.findViewById(R.id.book_image);
         }
     }
 }

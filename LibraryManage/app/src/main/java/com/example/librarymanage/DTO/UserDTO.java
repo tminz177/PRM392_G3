@@ -1,34 +1,22 @@
-package com.example.librarymanage.model;
+package com.example.librarymanage.DTO;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+public class UserDTO {
 
-@Entity(tableName = "user")
-public class User {
-
-    @PrimaryKey(autoGenerate = true)
     private int userId;
 
-    @ColumnInfo(name = "username")
     private String username;
 
-    @ColumnInfo(name = "password")
     private String password;
 
-    @ColumnInfo(name = "fullname")
     private String fullname;
 
-    @ColumnInfo(name = "phone")
     private String phone;
 
-    @ColumnInfo(name = "address")
     private String address;
 
-    @ColumnInfo(name = "role")
     private String role;
 
-    public User(int userId, String username, String password, String fullname, String phone, String address, String role) {
+    public UserDTO(int userId, String username, String password, String fullname, String phone, String address, String role) {
         this.userId = userId;
         this.username = username;
         this.password = password;
