@@ -1,4 +1,4 @@
-package com.example.librarymanage;
+package com.example.librarymanage.DAO;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
-import com.example.librarymanage.model.*;
+import com.example.librarymanage.Entity.*;
 
 import java.util.List;
 
@@ -33,11 +33,11 @@ public interface BookDAO {
     void updateQuantity(int sID, int sQuantity);
 
     @Query("SELECT book.bookId, category.categoryName, author.authorName, publisher.publisherName, book.bookName, book.image," +
-            "book. introduction, book.language, book.publishingYear, book.quantity, book.borrowPrice" +
+            "book.introduction, book.language, book.publishingYear, book.quantity, book.borrowPrice" +
             " FROM book join author on book.authorId = author.authorId join category on book.categoryId = category.categoryId " +
             "join publisher on book.publisherId = publisher.publisherId")
-    List<BookDetail> getAll();
+    List<Book> getAll();
 
-    @Query("SELECT * FROM book")
+    @Query("SELECT * FROM Book")
     List<Book> getBookList();
 }

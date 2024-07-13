@@ -16,7 +16,7 @@
         android:theme="@style/Theme.LibraryManage"
         tools:targetApi="31">
         <activity
-            android:name=".Homepage"
+            android:name=".Activity.HomepageActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage.NoActionBar">
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".BeginPage"
+            android:name=".Activity.BeginPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

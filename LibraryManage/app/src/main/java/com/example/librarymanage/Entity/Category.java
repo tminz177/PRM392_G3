@@ -1,14 +1,15 @@
-package com.example.librarymanage.model;
+package com.example.librarymanage.Entity;
 
-import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
+import com.example.librarymanage.DTO.BookDTO;
+
 @Entity(tableName = "category", foreignKeys = @ForeignKey(
-        entity= Book.class, parentColumns = "categoryId",
+        entity= BookDTO.class, parentColumns = "categoryId",
         childColumns = "categoryId"),
         indices = @Index(value="categoryId")
 )
@@ -18,17 +19,4 @@ public class Category {
 
     @ColumnInfo(name = "categoryName")
     private String categoryName;
-
-    public Category(@NonNull int categoryId, String categoryName) {
-        this.categoryId = categoryId;
-        this.categoryName = categoryName;
-    }
-
-    public int getCategoryId() {
-        return categoryId;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
 }
