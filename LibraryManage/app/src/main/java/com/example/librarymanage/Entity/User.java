@@ -9,17 +9,17 @@ import androidx.room.PrimaryKey;
 public class User {
 
     @PrimaryKey(autoGenerate = true)
-    private int userId;
+    public int userId;
     @ColumnInfo(name = "username")
-    private String username;
+    public String username;
     @ColumnInfo(name = "password")
-    private String password;
+    public String password;
     @ColumnInfo(name = "fullname")
-    private String fullname;
+    public String fullname;
     @ColumnInfo(name = "phone")
-    private String phone;
+    public String phone;
     @ColumnInfo(name = "address")
-    private String address;
+    public String address;
     @ColumnInfo(name = "role")
-    private String role;
+    public String role;
 }

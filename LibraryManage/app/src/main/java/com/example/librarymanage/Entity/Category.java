@@ -9,14 +9,14 @@ import androidx.room.PrimaryKey;
 import com.example.librarymanage.DTO.BookDTO;
 
 @Entity(tableName = "category", foreignKeys = @ForeignKey(
-        entity= BookDTO.class, parentColumns = "categoryId",
+        entity= Book.class, parentColumns = "categoryId",
         childColumns = "categoryId"),
         indices = @Index(value="categoryId")
 )
 public class Category {
     @PrimaryKey(autoGenerate = true)
-    private int categoryId;
+    public int categoryId;
 
     @ColumnInfo(name = "categoryName")
-    private String categoryName;
+    public String categoryName;
 }
