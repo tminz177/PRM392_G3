@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
-import com.example.librarymanage.Entity.*;
+import com.example.librarymanage.Entity.Book;
 
 import java.util.List;
 
@@ -32,10 +32,14 @@ public interface BookDAO {
     @Query("UPDATE book SET quantity = :sQuantity WHERE bookId = :sID")
     void updateQuantity(int sID, int sQuantity);
 
-    @Query("SELECT book.bookId, category.categoryName, author.authorName, publisher.publisherName, book.bookName, book.image," +
-            "book.introduction, book.language, book.publishingYear, book.quantity, book.borrowPrice" +
-            " FROM book join author on book.authorId = author.authorId join category on book.categoryId = category.categoryId " +
-            "join publisher on book.publisherId = publisher.publisherId")
+    @Query("SELECT b.bookId, b.categoryId, b.authorId, b.publisherId, " +
+            "c.categoryName, a.authorName, p.publisherName, " +
+            "b.bookName, b.image, b.introduction, b.language, " +
+            "b.publishingYear, b.quantity, b.borrowPrice " +
+            "FROM book b " +
+            "INNER JOIN category c ON b.categoryId = c.categoryId " +
+            "INNER JOIN author a ON b.authorId = a.authorId " +
+            "INNER JOIN publisher p ON b.publisherId = p.publisherId")
     List<Book> getAll();
 
     @Query("SELECT * FROM Book")

@@ -20,11 +20,36 @@
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.LogInActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.SignUpActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.PreForgotActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.ResetPasswordActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.AfterForgotActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
             android:name=".Activity.BeginPageActivity"

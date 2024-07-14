@@ -16,8 +16,9 @@ import com.example.librarymanage.Entity.Author;
 import com.example.librarymanage.Entity.Book;
 import com.example.librarymanage.Entity.Category;
 import com.example.librarymanage.Entity.Publisher;
+import com.example.librarymanage.Entity.User;
 
-@Database(entities = {Book.class, Author.class, Category.class, Publisher.class}, version = 1, exportSchema = false)
+@Database(entities = {Book.class, Author.class, Category.class, Publisher.class, User.class}, version = 1, exportSchema = false)
 public abstract class RoomDB extends RoomDatabase {
     private static RoomDB database;
 

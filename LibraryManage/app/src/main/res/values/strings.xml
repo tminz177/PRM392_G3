@@ -2,6 +2,9 @@
     <string name="app_name">LibraryManage</string>
     <string name="log_in">Log in</string>
     <string name="sign_up">Sign up</string>
+    <string name="forgot_send_otp">Send OTP</string>
+    <string name="submit">Submit</string>
+    <string name="reset">Reset</string>
     <string name="title_activity_homepage">homepage</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

@@ -16,7 +16,9 @@ public class UserDTO {
 
     private String role;
 
-    public UserDTO(int userId, String username, String password, String fullname, String phone, String address, String role) {
+    private String OTP;
+
+    public UserDTO(int userId, String username, String password, String fullname, String phone, String address, String role, String OTP) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -24,6 +26,7 @@ public class UserDTO {
         this.phone = phone;
         this.address = address;
         this.role = role;
+        this.OTP = OTP;
     }
 
     public int getUserId() {
@@ -80,5 +83,13 @@ public class UserDTO {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getOTP() {
+        return OTP;
+    }
+
+    public void setOTP(String OTP) {
+        this.OTP = OTP;
     }
 }
