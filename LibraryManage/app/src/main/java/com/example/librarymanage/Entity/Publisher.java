@@ -14,10 +14,10 @@ import com.example.librarymanage.DTO.BookDTO;
 )
 public class Publisher {
     @PrimaryKey(autoGenerate = true)
-    private int publisherId;
+    public int publisherId;
 
     @ColumnInfo(name = "publisherName")
-    private String publisherName;
+    public String publisherName;
 
     public int getPublisherId() {
         return publisherId;

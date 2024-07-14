@@ -15,25 +15,8 @@ import com.example.librarymanage.DTO.BookDTO;
 )
 public class Category {
     @PrimaryKey(autoGenerate = true)
-    private int categoryId;
+    public int categoryId;
 
     @ColumnInfo(name = "categoryName")
-    private String categoryName;
-
-    public int getCategoryId() {
-
-        return categoryId;
-    }
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
+    public String categoryName;
 }

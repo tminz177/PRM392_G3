@@ -16,24 +16,8 @@ import com.example.librarymanage.DTO.BookDTO;
 )
 public class Author {
     @PrimaryKey(autoGenerate = true)
-    private int authorId;
+    public int authorId;
 
     @ColumnInfo(name = "authorName")
-    private String authorName;
-
-    public int getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(int authorId) {
-        this.authorId = authorId;
-    }
-
-    public String getAuthorName() {
-        return authorName;
-    }
-
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
-    }
+    public String authorName;
 }
