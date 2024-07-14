@@ -32,11 +32,11 @@ public interface BookDAO {
     @Query("UPDATE book SET quantity = :sQuantity WHERE bookId = :sID")
     void updateQuantity(int sID, int sQuantity);
 
-    @Query("SELECT book.bookId, category.categoryName, author.authorName, publisher.publisherName, book.bookName, book.image," +
-            "book.introduction, book.language, book.publishingYear, book.quantity, book.borrowPrice" +
-            " FROM book join author on book.authorId = author.authorId join category on book.categoryId = category.categoryId " +
-            "join publisher on book.publisherId = publisher.publisherId")
-    List<Book> getAll();
+//    @Query("SELECT book.bookId, category.categoryName, author.authorName, publisher.publisherName, book.bookName, book.image," +
+//            "book.introduction, book.language, book.publishingYear, book.quantity, book.borrowPrice" +
+//            " FROM book join author on book.authorId = author.authorId join category on book.categoryId = category.categoryId " +
+//            "join publisher on book.publisherId = publisher.publisherId")
+//    List<Book> getAll();
 
     @Query("SELECT * FROM Book")
     List<Book> getBookList();

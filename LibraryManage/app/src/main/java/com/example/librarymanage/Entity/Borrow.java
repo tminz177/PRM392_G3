@@ -5,35 +5,36 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverters;
 
-import com.example.librarymanage.DTO.AuthorDTO;
-import com.example.librarymanage.DTO.BookDTO;
-import com.example.librarymanage.DTO.UserDTO;
+import com.example.librarymanage.Converter.Converter;
+
 
 import java.util.Date;
 
 @Entity(tableName = "borrow", foreignKeys = {@ForeignKey(
-        entity = BookDTO.class, parentColumns = "readerId",
-        childColumns = "readerId"), @ForeignKey(entity = AuthorDTO.class, parentColumns = "librarianId",
-        childColumns = "librarianId"), @ForeignKey(entity = UserDTO.class, parentColumns = "bookId",
-        childColumns = "bookId")}, indices = @Index(value="bookId")
+        entity = User.class, parentColumns = "userId",
+        childColumns = "readerId"), @ForeignKey(entity = User.class, parentColumns = "userId",
+        childColumns = "librarianId"), @ForeignKey(entity = Book.class, parentColumns = "bookId",
+        childColumns = "bookId")}, indices = {@Index(value="bookId"), @Index(value="readerId"), @Index(value="librarianId")}
 )
+@TypeConverters(Converter.class)
 public class Borrow {
     @PrimaryKey()
-    private int borrowId;
+    public int borrowId;
     @ColumnInfo(name = "readerId")
-    private int readerId;
+    public int readerId;
     @ColumnInfo(name = "librarianId")
-    private int librarianId;
+    public int librarianId;
     @ColumnInfo(name = "bookId")
-    private int bookId;
+    public int bookId;
     @ColumnInfo(name = "quantity")
-    private int quantity;
+    public int quantity;
     @ColumnInfo(name = "borrowDate")
-    private Date borrowDate;
+    public Date borrowDate;
     @ColumnInfo(name = "returnDate")
-    private Date returnDate;
+    public Date returnDate;
     @ColumnInfo(name = "status")
-    private int status;
+    public int status;
 
 }

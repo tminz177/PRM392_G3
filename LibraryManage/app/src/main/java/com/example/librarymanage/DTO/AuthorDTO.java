@@ -7,13 +7,7 @@ import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "author", foreignKeys = @ForeignKey(
-        entity= BookDTO.class, parentColumns = "authorId",
-        childColumns = "authorId"),
-        indices = @Index(value="authorId")
-)
 public class AuthorDTO {
-    @PrimaryKey(autoGenerate = true)
     private int authorId;
 
     @ColumnInfo(name = "authorName")
