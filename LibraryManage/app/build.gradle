@@ -15,7 +15,10 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    packagingOptions {
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -53,4 +56,7 @@ dependencies {
     implementation libs.material.v120alpha03
     implementation 'com.makeramen:roundedimageview:2.3.0'
     annotationProcessor libs.room.compiler
+    implementation 'com.github.appsfeature:otp-view:1.1'
+    implementation 'com.sun.mail:android-mail:1.6.7'
+    implementation 'com.sun.mail:android-activation:1.6.7'
 }

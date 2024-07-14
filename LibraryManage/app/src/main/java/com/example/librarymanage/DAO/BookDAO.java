@@ -7,7 +7,7 @@ import androidx.room.Query;
 
 import static androidx.room.OnConflictStrategy.REPLACE;
 
-import com.example.librarymanage.Entity.*;
+import com.example.librarymanage.Entity.Book;
 
 import java.util.List;
 
