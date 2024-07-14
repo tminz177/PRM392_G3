@@ -13,35 +13,35 @@ import java.io.Serializable;
     public class Book{
         @NonNull
         @PrimaryKey(autoGenerate = true)
-        private int bookId;
+        public int bookId;
 
         @ColumnInfo(name = "categoryId")
-        private int categoryId;
+        public int categoryId;
 
         @ColumnInfo(name = "authorId")
-        private int authorId;
+        public int authorId;
 
         @ColumnInfo(name = "publisherId")
-        private int publisherId;
+        public int publisherId;
 
         @ColumnInfo(name = "bookName")
-        private String bookName;
+        public String bookName;
 
         @ColumnInfo(name = "image")
-        private String image;
+        public String image;
 
         @ColumnInfo(name = "introduction")
-        private String introduction;
+        public String introduction;
 
         @ColumnInfo(name = "language")
-        private String language;
+        public String language;
 
         @ColumnInfo(name = "publishingYear")
-        private int publishingYear;
+        public int publishingYear;
 
         @ColumnInfo(name = "quantity")
-        private int quantity;
+        public int quantity;
 
         @ColumnInfo(name = "borrowPrice")
-        private int borrowPrice;
+        public int borrowPrice;
     }
