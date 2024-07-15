@@ -21,7 +21,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
 
     private String email;
     private ImageView backArrow;
-    private EditText password, re_password;
+    private EditText password, re_password; 
     private Button btn_submit;
     private UserDAO userDAO;
     private RoomDB roomDB;
