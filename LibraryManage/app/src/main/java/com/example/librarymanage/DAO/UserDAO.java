@@ -1,36 +1,38 @@
 package com.example.librarymanage.DAO;
 
+import static androidx.room.OnConflictStrategy.REPLACE;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import static androidx.room.OnConflictStrategy.REPLACE;
+import com.example.librarymanage.DTO.UserDTO;
+import com.example.librarymanage.Entity.*;
 
-import com.example.librarymanage.Entity.User;
 import java.util.List;
 
 @Dao
 public interface UserDAO {
     @Insert(onConflict = REPLACE)
-    void insert(User user);
+    void insert(UserDTO user);
 
     @Delete
-    void delete(User user);
+    void delete(UserDTO user);
 
     @Delete
-    void deleteAll(List<User> users);
+    void deleteAll(List<UserDTO> users);
 
     @Update
-    void update(User user);
+    void update(UserDTO user);
 
-    @Query("SELECT * FROM user")
-    List<User> getAllUsers();
-
-    @Query("SELECT * FROM user WHERE userId = :userId")
-    User getUserById(int userId);
-
-    @Query("SELECT * FROM user WHERE email = :email")
-    User getUserByEmail(String email);
+//    @Query("SELECT * FROM User")
+//    List<UserDTO> getAllUsers();
+//
+//    @Query("SELECT * FROM user WHERE userId = :userId")
+//    UserDTO getUserById(int userId);
+//
+//    @Query("SELECT * FROM user WHERE email = :email")
+//    UserDTO getUserByEmail(String email);
 }

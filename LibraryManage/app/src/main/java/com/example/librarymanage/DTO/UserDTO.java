@@ -1,40 +1,38 @@
 package com.example.librarymanage.DTO;
 
-public class UserDTO {
+import java.io.Serializable;
+import java.util.Date;
 
-    private int userId;
+public class UserDTO implements Serializable {
 
+    private int id;
     private String username;
-
     private String password;
-
     private String fullname;
-
     private String phone;
-
     private String address;
-
     private String role;
+    private Date dob;
+    private String email;
 
-    private String OTP;
-
-    public UserDTO(int userId, String username, String password, String fullname, String phone, String address, String role, String OTP) {
-        this.userId = userId;
+    public UserDTO(int id, String username, String password, String fullname, String phone, String address, String role, Date dob, String OTP) {
+        this.id = id;
         this.username = username;
         this.password = password;
         this.fullname = fullname;
         this.phone = phone;
         this.address = address;
         this.role = role;
-        this.OTP = OTP;
+        this.dob = dob;
+        this.email = email;
     }
 
-    public int getUserId() {
-        return userId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -85,11 +83,32 @@ public class UserDTO {
         this.role = role;
     }
 
-    public String getOTP() {
-        return OTP;
+    public Date getDob() {
+        return dob;
     }
 
-    public void setOTP(String OTP) {
-        this.OTP = OTP;
+    public void setDob(Date dob) {
+        this.dob = dob;
     }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+
+    }
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", dob='" + dob + '\'' +
+                '}';
 }
+
+}
+

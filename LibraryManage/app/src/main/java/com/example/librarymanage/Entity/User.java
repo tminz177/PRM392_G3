@@ -1,9 +1,10 @@
 package com.example.librarymanage.Entity;
 
-public class Account {
+import androidx.room.ColumnInfo;
+
+public class User {
     private Integer id;
     private String username;
-<<<<<<< Updated upstream
     @ColumnInfo(name = "email")
     private String email;
     @ColumnInfo(name = "password")
@@ -19,11 +20,12 @@ public class Account {
     @ColumnInfo(name = "otp")
     private String otp;
 
-    public User() {
+    public User(String password) {
+        this.password = password;
     }
 
-    public User(int userId, String username, String email, String password, String fullname, String phone, String address, String role, String otp) {
-        this.userId = userId;
+    public User(int id, String username, String email, String password, String fullname, String phone, String address, String role, String otp) {
+        this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
@@ -37,7 +39,7 @@ public class Account {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "userId=" + id +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
@@ -49,18 +51,12 @@ public class Account {
                 '}';
     }
 
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-=======
     private String password;
     private String email;
     private String dob;
 
     public Account() {
+
     }
 
     public Account(String username, String password) {
@@ -82,7 +78,6 @@ public class Account {
 
     public void setId(Integer id) {
         this.id = id;
->>>>>>> Stashed changes
     }
 
     public String getUsername() {
@@ -92,8 +87,6 @@ public class Account {
     public void setUsername(String username) {
         this.username = username;
     }
-
-<<<<<<< Updated upstream
     public String getEmail() {
         return email;
     }
@@ -101,9 +94,6 @@ public class Account {
     public void setEmail(String email) {
         this.email = email;
     }
-
-=======
->>>>>>> Stashed changes
     public String getPassword() {
         return password;
     }
@@ -112,7 +102,6 @@ public class Account {
         this.password = password;
     }
 
-<<<<<<< Updated upstream
     public String getFullname() {
         return fullname;
     }
@@ -153,13 +142,12 @@ public class Account {
         this.otp = otp;
     }
 }
-=======
     public String getEmail() {
-        return email;
+    return email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+    this.email = email;
     }
 
     public String getDob() {
@@ -180,6 +168,6 @@ public class Account {
                 ", dob='" + dob + '\'' +
                 '}';
     }
-}
 
->>>>>>> Stashed changes
+
+
