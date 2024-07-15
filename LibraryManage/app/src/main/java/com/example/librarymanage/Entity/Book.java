@@ -33,9 +33,6 @@ public class Book{
     @ColumnInfo(name = "introduction")
     public String introduction;
 
-    @ColumnInfo(name = "language")
-    public String language;
-
     @ColumnInfo(name = "publishingYear")
     public int publishingYear;
 

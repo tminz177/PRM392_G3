@@ -20,4 +20,9 @@ public class Author {
 
     @ColumnInfo(name = "authorName")
     public String authorName;
+
+    @ColumnInfo(name = "authorImage")
+    public String authorImage;
+
+
 }
