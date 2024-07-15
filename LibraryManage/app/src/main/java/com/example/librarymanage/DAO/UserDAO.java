@@ -7,8 +7,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
-
-import com.example.librarymanage.DTO.UserDTO;
 import com.example.librarymanage.Entity.*;
 
 import java.util.List;
@@ -16,23 +14,23 @@ import java.util.List;
 @Dao
 public interface UserDAO {
     @Insert(onConflict = REPLACE)
-    void insert(UserDTO user);
+    void insert(User user);
 
     @Delete
-    void delete(UserDTO user);
+    void delete(User user);
 
     @Delete
-    void deleteAll(List<UserDTO> user);
+    void deleteAll(List<User> user);
 
     @Update
-    void update(UserDTO user);
+    void update(User user);
 
     @Query("SELECT * FROM User")
-    List<UserDTO> getAllUsers();
+    List<User> getAllUsers();
 
     @Query("SELECT * FROM user WHERE userId = :userId")
-    UserDTO getUserById(int userId);
+    User getUserById(int userId);
 
     @Query("SELECT * FROM user WHERE email = :email")
-    UserDTO getUserByEmail(String email);
+    User getUserByEmail(String email);
 }
