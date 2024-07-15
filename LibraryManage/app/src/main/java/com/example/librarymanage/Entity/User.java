@@ -1,17 +1,9 @@
 package com.example.librarymanage.Entity;
 
-import androidx.room.ColumnInfo;
-import androidx.room.Entity;
-import androidx.room.Index;
-import androidx.room.PrimaryKey;
-
-@Entity(tableName = "user", indices = @Index(value = "userId", unique = true))
-public class User {
-
-    @PrimaryKey(autoGenerate = true)
-    private int userId;
-    @ColumnInfo(name = "username")
+public class Account {
+    private Integer id;
     private String username;
+<<<<<<< Updated upstream
     @ColumnInfo(name = "email")
     private String email;
     @ColumnInfo(name = "password")
@@ -63,6 +55,34 @@ public class User {
 
     public void setUserId(int userId) {
         this.userId = userId;
+=======
+    private String password;
+    private String email;
+    private String dob;
+
+    public Account() {
+    }
+
+    public Account(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public Account(Integer id, String username, String password, String email, String dob) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.dob = dob;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+>>>>>>> Stashed changes
     }
 
     public String getUsername() {
@@ -73,6 +93,7 @@ public class User {
         this.username = username;
     }
 
+<<<<<<< Updated upstream
     public String getEmail() {
         return email;
     }
@@ -81,6 +102,8 @@ public class User {
         this.email = email;
     }
 
+=======
+>>>>>>> Stashed changes
     public String getPassword() {
         return password;
     }
@@ -89,6 +112,7 @@ public class User {
         this.password = password;
     }
 
+<<<<<<< Updated upstream
     public String getFullname() {
         return fullname;
     }
@@ -129,3 +153,33 @@ public class User {
         this.otp = otp;
     }
 }
+=======
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", dob='" + dob + '\'' +
+                '}';
+    }
+}
+
+>>>>>>> Stashed changes
