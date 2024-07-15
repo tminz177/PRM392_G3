@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btnOpenUpdateProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, example.librarymanage.UpdateProfileActivity.class);
+                Intent intent = new Intent(MainActivity.this, com.example.librarymanage.UpdateProfileActivity);
                 intent.putExtra("user", user); // truyền đối tượng user
                 startActivityForResult(intent, REQUEST_CODE_UPDATE_PROFILE);
             }

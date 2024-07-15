@@ -20,6 +20,7 @@ roomRuntime = "2.6.1"
 roomCompiler = "2.6.1"
 roomRuntimeAndroid = "2.7.0-alpha04"
 roomRuntimeJvm = "2.7.0-alpha04"
+firebaseFirestore = "25.0.0"
 
 [libraries]
 imageslideshow = { module = "cpm.github.denzcoskun:ImageSlideshow", version.ref = "imageslideshow" }
@@ -42,6 +43,7 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomCompiler" }
 room-runtime-android = { group = "androidx.room", name = "room-runtime-android", version.ref = "roomRuntimeAndroid" }
 room-runtime-jvm = { group = "androidx.room", name = "room-runtime-jvm", version.ref = "roomRuntimeJvm" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

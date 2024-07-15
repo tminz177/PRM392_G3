@@ -67,9 +67,9 @@ public class UpdateProfileActivity<Intent> extends AppCompatActivity {
         Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
 
         // Return updated user
-//        Intent resultIntent = new Intent();
-//        resultIntent.putExtra("updatedUser", user);
-//        setResult(RESULT_OK, resultIntent);
-//        finish();
+        Intent resultIntent = new Intent();
+        resultIntent.putExtra("updatedUser", user);
+        setResult(RESULT_OK, resultIntent);
+        finish();
     }
 }

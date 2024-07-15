@@ -1,9 +1,16 @@
 package com.example.librarymanage.Entity;
 
 import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "user", indices = @Index(value = "userId", unique = true))
 public class User {
-    private Integer id;
+
+    @PrimaryKey(autoGenerate = true)
+    private int userId;
+    @ColumnInfo(name = "username")
     private String username;
     @ColumnInfo(name = "email")
     private String email;
@@ -20,12 +27,11 @@ public class User {
     @ColumnInfo(name = "otp")
     private String otp;
 
-    public User(String password) {
-        this.password = password;
+    public User() {
     }
 
-    public User(int id, String username, String email, String password, String fullname, String phone, String address, String role, String otp) {
-        this.id = id;
+    public User(int userId, String username, String email, String password, String fullname, String phone, String address, String role, String otp) {
+        this.userId = userId;
         this.username = username;
         this.email = email;
         this.password = password;
@@ -39,7 +45,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + id +
+                "userId=" + userId +
                 ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
@@ -51,33 +57,12 @@ public class User {
                 '}';
     }
 
-    private String password;
-    private String email;
-    private String dob;
-
-    public Account() {
-
+    public int getUserId() {
+        return userId;
     }
 
-    public Account(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
-
-    public Account(Integer id, String username, String password, String email, String dob) {
-        this.id = id;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.dob = dob;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getUsername() {
@@ -87,6 +72,7 @@ public class User {
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getEmail() {
         return email;
     }
@@ -94,6 +80,7 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
+
     public String getPassword() {
         return password;
     }
@@ -142,32 +129,3 @@ public class User {
         this.otp = otp;
     }
 }
-    public String getEmail() {
-    return email;
-    }
-
-    public void setEmail(String email) {
-    this.email = email;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
-    @Override
-    public String toString() {
-        return "Account{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", dob='" + dob + '\'' +
-                '}';
-    }
-
-
-

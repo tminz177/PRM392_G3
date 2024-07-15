@@ -16,6 +16,7 @@ import com.example.librarymanage.DTO.RoomDB;
 import com.example.librarymanage.Entity.User;
 import com.example.librarymanage.R;
 
+
 public class SignUpActivity extends AppCompatActivity {
     private EditText fullname,email, password,re_password;
     private Button sign_up_btn;

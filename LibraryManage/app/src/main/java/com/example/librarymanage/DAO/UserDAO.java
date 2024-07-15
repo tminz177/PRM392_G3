@@ -22,17 +22,17 @@ public interface UserDAO {
     void delete(UserDTO user);
 
     @Delete
-    void deleteAll(List<UserDTO> users);
+    void deleteAll(List<UserDTO> user);
 
     @Update
     void update(UserDTO user);
 
-//    @Query("SELECT * FROM User")
-//    List<UserDTO> getAllUsers();
-//
-//    @Query("SELECT * FROM user WHERE userId = :userId")
-//    UserDTO getUserById(int userId);
-//
-//    @Query("SELECT * FROM user WHERE email = :email")
-//    UserDTO getUserByEmail(String email);
+    @Query("SELECT * FROM User")
+    List<UserDTO> getAllUsers();
+
+    @Query("SELECT * FROM user WHERE userId = :userId")
+    UserDTO getUserById(int userId);
+
+    @Query("SELECT * FROM user WHERE email = :email")
+    UserDTO getUserByEmail(String email);
 }

@@ -33,7 +33,7 @@ public class AccountDao {
             sqLiteDatabase.insert(Constant.Account.TABLE_NAME.getValue(), null, contentValues);
         });
         sqLiteDatabase.close();
-    }
+}
 
     public Account checkAccount(Context context, Account account) {
         db = new DBHelper(context);
