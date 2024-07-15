@@ -16,4 +16,14 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="spinner">My Application</string>
+    <string name="example_image_desc">This is an example image</string>
+    <string-array name="category_array">
+        <item>Fiction</item>
+        <item>Non-Fiction</item>
+        <item>Science</item>
+        <item>History</item>
+    </string-array>
 </resources>
