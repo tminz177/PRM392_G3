@@ -24,9 +24,9 @@ public interface BookDAO {
     void reset(List<Book> book);
 
     @Query("UPDATE book SET bookName = :sName, image = :sImage, introduction = :sIntroduction, " +
-            "language = :sLanguage, publishingYear = :sPublishingYear, quantity = :sQuantity, " +
+            "publishingYear = :sPublishingYear, quantity = :sQuantity, " +
             "borrowPrice = :sBorrowPrice WHERE bookId = :sID")
-    void update(int sID, String sName, String sImage, String sIntroduction, String sLanguage,
+    void update(int sID, String sName, String sImage, String sIntroduction,
                 int sPublishingYear, int sQuantity, int sBorrowPrice);
 
     @Query("UPDATE book SET quantity = :sQuantity WHERE bookId = :sID")
