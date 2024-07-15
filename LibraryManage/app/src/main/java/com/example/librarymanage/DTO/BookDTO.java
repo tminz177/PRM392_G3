@@ -11,10 +11,10 @@ public class BookDTO{
     private String language;
     private int publishingYear;
     private int quantity;
-    private int borrowPrice;
+    private double borrowPrice;
 
     public BookDTO(int bookId, int categoryId, int authorId, int publisherId, String bookName,
-                   String image, String introduction, String language, int publishingYear, int quantity, int borrowPrice) {
+                   String image, String introduction, String language, int publishingYear, int quantity, double borrowPrice) {
         this.bookId = bookId;
         this.categoryId = categoryId;
         this.authorId = authorId;
@@ -64,7 +64,7 @@ public class BookDTO{
         return quantity;
     }
 
-    public int getBorrowPrice() {
+    public double getBorrowPrice() {
         return borrowPrice;
     }
 
