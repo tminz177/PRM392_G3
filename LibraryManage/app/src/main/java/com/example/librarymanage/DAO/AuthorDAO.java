@@ -22,4 +22,7 @@ public interface AuthorDAO {
 
     @Query("SELECT MAX(authorId) FROM author")
     int getLatestAuthorId();
+
+    @Query("SELECT * FROM book b join author a on b.authorId = a.authorId")
+    List<Author> getAuthorList();
 }
