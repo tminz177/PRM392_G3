@@ -6,10 +6,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
-import com.example.librarymanage.Activity.AfterForgotActivity;
-import com.example.librarymanage.DAO.UserDAO;
-import com.example.librarymanage.DTO.RoomDB;
-import com.example.librarymanage.Entity.User;
+import com.example.librarymanage.Activity.Auth.AfterForgotActivity;
 
 import java.io.IOException;
 import java.util.Properties;

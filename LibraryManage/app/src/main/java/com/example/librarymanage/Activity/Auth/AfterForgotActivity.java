@@ -1,4 +1,4 @@
-package com.example.librarymanage.Activity;
+package com.example.librarymanage.Activity.Auth;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.librarymanage.Activity;
+package com.example.librarymanage.Activity.Public;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.librarymanage.Activity.Auth.LogInActivity;
 import com.example.librarymanage.R;
 
 public class BeginPageActivity extends AppCompatActivity {

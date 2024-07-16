@@ -1,4 +1,4 @@
-package com.example.librarymanage.Activity;
+package com.example.librarymanage.Activity.Auth;
 
 import android.os.Bundle;
 import android.view.View;
