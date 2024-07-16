@@ -1,4 +1,4 @@
-package com.example.librarymanage.Activity;
+package com.example.librarymanage.Activity.Auth;
 
 import android.os.Bundle;
 import android.util.Patterns;
@@ -15,6 +15,7 @@ import com.example.librarymanage.DAO.UserDAO;
 import com.example.librarymanage.DTO.RoomDB;
 import com.example.librarymanage.Entity.User;
 import com.example.librarymanage.R;
+import com.example.librarymanage.Util.Constant;
 
 
 public class SignUpActivity extends AppCompatActivity {
@@ -78,9 +79,12 @@ public class SignUpActivity extends AppCompatActivity {
                 runOnUiThread(() -> Toast.makeText(this, "Email already exists", Toast.LENGTH_SHORT).show());
             } else {
                 User newUser = new User();
+
                 newUser.setFullname(fullnameInput);
                 newUser.setEmail(emailInput);
                 newUser.setPassword(passwordInput);
+                newUser.setRole(Constant.USER_ROLE);
+
                 userDAO.insert(newUser);
                 runOnUiThread(() -> {
                     Toast.makeText(this, "Account created successfully", Toast.LENGTH_SHORT).show();

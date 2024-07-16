@@ -16,43 +16,55 @@
         android:theme="@style/Theme.LibraryManage"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.HomepageActivity"
+            android:name=".Activity.User.HomepageActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage.NoActionBar">
         </activity>
         <activity
-            android:name=".Activity.LogInActivity"
+            android:name=".Activity.Auth.LogInActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
-            android:name=".Activity.SignUpActivity"
+            android:name=".Activity.Auth.SignUpActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
-            android:name=".Activity.PreForgotActivity"
+            android:name=".Activity.Auth.PreForgotActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
-            android:name=".Activity.ResetPasswordActivity"
+            android:name=".Activity.Auth.ResetPasswordActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
-            android:name=".Activity.AfterForgotActivity"
+            android:name=".Activity.Auth.AfterForgotActivity"
             android:exported="true"
             android:label="@string/title_activity_homepage"
             android:theme="@style/Theme.LibraryManage">
         </activity>
         <activity
-            android:name=".Activity.BeginPageActivity"
+            android:name=".Activity.Admin.HomepageAdminActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.Librarian.HomepageLibrarianActivity"
+            android:exported="true"
+            android:label="@string/title_activity_homepage"
+            android:theme="@style/Theme.LibraryManage">
+        </activity>
+        <activity
+            android:name=".Activity.Public.BeginPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

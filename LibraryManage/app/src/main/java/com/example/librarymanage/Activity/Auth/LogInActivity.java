@@ -1,4 +1,4 @@
-package com.example.librarymanage.Activity;
+package com.example.librarymanage.Activity.Auth;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,13 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.librarymanage.Activity.Admin.HomepageAdminActivity;
+import com.example.librarymanage.Activity.Librarian.HomepageLibrarianActivity;
+import com.example.librarymanage.Activity.Public.BeginPageActivity;
+import com.example.librarymanage.Activity.User.HomepageActivity;
 import com.example.librarymanage.DAO.UserDAO;
 import com.example.librarymanage.DTO.RoomDB;
 import com.example.librarymanage.Entity.User;
 import com.example.librarymanage.R;
+import com.example.librarymanage.Util.Constant;
 
 public class LogInActivity extends AppCompatActivity {
 
@@ -69,6 +73,21 @@ public class LogInActivity extends AppCompatActivity {
             if (user != null && user.getPassword().equals(passwordInput)) {
                 runOnUiThread(() -> Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show());
                 //redirect by
+                Intent intent ;
+                switch (user.getRole()) {
+                    case Constant.USER_ROLE :
+                        intent = new Intent(this, HomepageActivity.class);
+                        break;
+                    case Constant.ADMIN_ROLE :
+                        intent = new Intent(this, HomepageAdminActivity.class);
+                        break;
+                    case Constant.LIBRARIAN_ROLE :
+                        intent = new Intent(this, HomepageLibrarianActivity.class);
+                        break;
+                    default:
+                        intent = new Intent(this, BeginPageActivity.class);
+                }
+                startActivity(intent);
             } else {
                 runOnUiThread(() -> Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show());
             }
